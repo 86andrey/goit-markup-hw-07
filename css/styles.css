@@ -214,7 +214,8 @@ img {
     margin-right: auto;
 }
 
-.hero-button {
+.hero-button,
+.footer-input__btn {
     font-weight: bold;
     font-size: 16px;
     line-height: 1.875;
@@ -705,8 +706,6 @@ textarea {
 
 .footer-address__item {
     margin-bottom: 9px;
-    color: var(--primary-white-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address__item .footer-address__link--white {
@@ -729,11 +728,15 @@ textarea {
 }
 
 .footer-join {
-    margin-left: auto;
+    margin-left: 70px;
 }
 
-.footer-join-text {  
-    font-size: 14px; 
+.footer-input {
+    margin-left: 93px;
+}
+
+.footer-join__text,
+.footer-input__text{   
     font-weight: bold;
     line-height: 1.14;
     text-transform: uppercase;
@@ -741,14 +744,15 @@ textarea {
     margin-bottom: 20px;
 }
 
-.join-list {
+.footer-join__list,
+.footer-input__list {
     display: flex;
     align-items: center;
     width: 206px;
     height: 44px;
 }
 
-.footer-join-link {
+.footer-join__link {
     display: flex;
     margin-right: 10px;
     width: 44px;
@@ -761,28 +765,28 @@ textarea {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-join-link:hover,
-.footer-join-link:focus {
+.footer-join__link:hover,
+.footer-join__link:focus {
     background-color: var(--accent-color);
 }
 
-.footer-join-icon {
+.footer-join__icon {
     height: 20px;
     width: 20px;
     fill: var(--primary-white-color);
 }
 
-.input-join-icon {
+.footer-input__icon {
     margin-left: 10px;
     fill: var(--primary-white-color);
 }
 
-.input-list {
+.footer-input__list {
     display: flex;
     align-items: center;
 
 }
-.input-sign {
+.footer-input__sign {
     width: 358px;
     height: 50px;
     padding-left: 16px;
@@ -797,7 +801,7 @@ textarea {
     font-size: 16px;
 }
 
-.input-sign::placeholder {
+.footer-input__sign::placeholder {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
