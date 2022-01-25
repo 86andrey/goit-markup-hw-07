@@ -65,6 +65,7 @@ img {
   }
 
 /* -----------------------HEADER------------------- */
+
 .header {
     border-bottom-color: #ECECEC;
     border-bottom-width: 1px;
@@ -79,9 +80,6 @@ img {
 
 .header-logo {
     margin-right: 93px;
-}
-.header-logo,
-.footer-logo {
     color: var(--accent-color);
     font-family: Raleway;
     font-weight: bold;
@@ -90,7 +88,7 @@ img {
     text-decoration: none;
 }
 
-.logotype {
+.header-logo__text {
     color: var(--title-text-color);
 }
 
@@ -688,6 +686,15 @@ textarea {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--background-color-hero);
+}
+
+.footer-logo {
+    color: var(--accent-color);
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
 }
 
 .footer-all {
