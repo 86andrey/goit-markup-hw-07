@@ -46,9 +46,9 @@
     text-decoration: none;
 
     &:hover, &:focus {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-                0px 4px 4px rgba(0, 0, 0, 0.06),
-                1px 4px 6px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 1px 1px var(--btn-hover-color),
+                0px 4px 4px var(--portfolio-card-hover),
+                1px 4px 6px var(--portfolio-card-shadow);
     }
 }
 
@@ -79,7 +79,7 @@
 
     .portfolio-card__item > .portfolio-card__link:hover &,
     .portfolio-card__item > .portfolio-card__link:focus & {
-        background-color: rgba(33, 150, 243, 0.9);
+        background-color: var(--card-link-hover);
         transform: translateY(0);
     }
 }

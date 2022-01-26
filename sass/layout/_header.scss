@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    border-bottom-color: #ECECEC;
+    border-bottom-color: var(--header-border-bottom);
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }

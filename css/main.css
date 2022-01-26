@@ -9,6 +9,22 @@
   --clients-link-color: #AFB1B8;
   --form-button-color: #188CE8;
   --portfolio-border-color: #EEEEEE;
+  --header-border-bottom: #ECECEC;
+  --team-list-shadow: rgba(0, 0, 0, 0.14);
+  --button-box-shadow: rgba(0, 0, 0, 0.15);
+  --footer-input-bc: rgba(255, 255, 255, 0.3);
+  --overlay-bg-image: rgba(47, 48, 58, 0.4);
+  --backdrop-bg-color: rgba(0, 0, 0, 0.2);
+  --close-button-bordercolor: rgba(0, 0, 0, 0.1);
+  --btn-box-shadow-color: rgba(0, 0, 0, 0.08);
+  --btn-hover-color: rgba(0, 0, 0, 0.12);
+  --portfolio-card-shadow: rgba(0, 0, 0, 0.16);
+  --portfolio-card-hover: rgba(0, 0, 0, 0.06);
+  --form-input-bordercolor: rgba(33, 33, 33, 0.2);
+  --form-input-placeholder: rgba(117, 117, 117, 0.5);
+  --footer-join__link-color: rgba(255, 255, 255, 0.1);
+  --card-link-hover: rgba(33, 150, 243, 0.9);
+  --work-list-bgc: rgba(47, 48, 58, 0.8);
 }
 
 .link,
@@ -72,7 +88,7 @@ body {
   cursor: pointer;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--button-box-shadow);
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
@@ -108,7 +124,7 @@ body {
 
 .header {
   position: relative;
-  border-bottom-color: #ECECEC;
+  border-bottom-color: var(--header-border-bottom);
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
@@ -221,7 +237,7 @@ body {
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-hero.jpg");
+  background-image: linear-gradient(var(--overlay-bg-image), var(--overlay-bg-image)), url("../images/Img-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -247,7 +263,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--backdrop-bg-color);
   padding: 222px 536px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -281,7 +297,7 @@ body {
   width: 30px;
   height: 30px;
   margin: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--close-button-bordercolor);
   background-color: var(--primary-white-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -321,7 +337,7 @@ body {
   margin-top: 4px;
   padding: 12px 42px;
   height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--form-input-bordercolor);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -335,7 +351,7 @@ body {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--form-input-placeholder);
 }
 .form__input-name:-ms-input-placeholder {
   font-family: Roboto;
@@ -344,7 +360,7 @@ body {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--form-input-placeholder);
 }
 .form__input-name::placeholder {
   font-family: Roboto;
@@ -353,7 +369,7 @@ body {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--form-input-placeholder);
 }
 
 .form__label {
@@ -379,7 +395,7 @@ body {
   resize: none;
   width: 100%;
   height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--form-input-bordercolor);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -445,7 +461,7 @@ body {
   cursor: pointer;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--button-box-shadow);
   border-radius: 4px;
   border-color: transparent;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -473,7 +489,7 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #F5F4FA;
+  background-color: var(--portfolio-btn-color);
   margin-bottom: 30px;
 }
 
@@ -512,7 +528,7 @@ body {
   width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
-  background-color: rgba(47, 48, 58, 0.8);
+  background-color: var(--work-list-bgc);
 }
 
 .work-list__title {
@@ -541,12 +557,12 @@ body {
   width: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px var(--btn-hover-color), 0px 1px 1px var(--team-list-shadow), 0px 2px 1px var(--backdrop-bg-color);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-person {
-  background: #FFFFFF;
+  background: var(--primary-white-color);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   padding-top: 30px;
@@ -724,7 +740,7 @@ body {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-join__link-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-join__link:hover, .footer-join__link:focus {
@@ -753,11 +769,11 @@ body {
   padding-left: 16px;
   padding-right: 16px;
   margin-right: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--footer-input-bc);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  background-color: #2F303A;
+  background-color: var(--background-color-hero);
   color: var(--primary-white-color);
   font-size: 16px;
 }
@@ -770,7 +786,7 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-footer-link);
 }
 .footer-input__sign:-ms-input-placeholder {
   font-family: Roboto;
@@ -781,7 +797,7 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-footer-link);
 }
 .footer-input__sign::placeholder {
   font-family: Roboto;
@@ -792,7 +808,7 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-footer-link);
 }
 
 .list-btn__button {
@@ -814,7 +830,7 @@ body {
 .list-btn__button:hover, .list-btn__button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px var(--close-button-bordercolor), 0px 1px 2px var(--btn-box-shadow-color), 0px 2px 2px var(--btn-hover-color);
 }
 
 .list-btn {
@@ -875,7 +891,7 @@ body {
   text-decoration: none;
 }
 .portfolio-card__link:hover, .portfolio-card__link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px var(--btn-hover-color), 0px 4px 4px var(--portfolio-card-hover), 1px 4px 6px var(--portfolio-card-shadow);
 }
 
 .portfolio-card__thumb {
@@ -903,6 +919,6 @@ body {
   color: var(--primary-white-color);
 }
 .portfolio-card__item > .portfolio-card__link:hover .portfolio-card__subtext, .portfolio-card__item > .portfolio-card__link:focus .portfolio-card__subtext {
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: var(--card-link-hover);
   transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */

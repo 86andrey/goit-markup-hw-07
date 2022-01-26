@@ -9,8 +9,8 @@
     height: 600px;
     margin: 0 auto;
     background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)),
+        var(--overlay-bg-image),
+        var(--overlay-bg-image)),
         url('../images/Img-hero.jpg');
     background-repeat: no-repeat;
     background-position: center;
