@@ -284,16 +284,15 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button:hover .close-icon {
+.close-button__icon {
+  fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover .close-button__icon {
   fill: var(--accent-color);
 }
 
-.close-icon {
-  fill: var(--title-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-title {
+.modal__title {
   margin-bottom: 12px;
   font-size: 20px;
   line-height: 1.15;
@@ -302,13 +301,13 @@ body {
   color: var(--title-text-color);
 }
 
-.form-field-list {
+.form__list {
   display: block;
   margin: 0;
   padding: 0;
 }
 
-.form-field {
+.form__item {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -316,7 +315,7 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field input {
+.form__item input {
   margin-top: 4px;
   padding: 12px 42px;
   height: 40px;
@@ -325,7 +324,7 @@ body {
   border-radius: 4px;
 }
 
-.form-field label {
+.form__label {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -342,7 +341,7 @@ body {
   box-sizing: border-box;
 }
 
-.form-field textarea::-moz-placeholder {
+.form__item textarea::-moz-placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -352,7 +351,7 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field textarea:-ms-input-placeholder {
+.form__item textarea:-ms-input-placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -362,7 +361,7 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field textarea::placeholder {
+.form__item textarea::placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -388,18 +387,18 @@ textarea {
   margin-bottom: 20px;
 }
 
-.form-field:hover .input-name,
-.form-field:focus-within .input-name {
+.form__item:hover .form__input-name,
+.form__item:focus-within .form__input-name {
   border-color: var(--accent-color);
 }
 
-.form-icon {
+.form__icon {
   background-size: contain;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:hover .form-icon,
-.form-field:focus-within .form-icon {
+.form__item:hover .form__icon,
+.form__item:focus-within .form__icon {
   fill: var(--accent-color);
 }
 
@@ -543,7 +542,13 @@ textarea {
   background-color: var(--portfolio-btn-color);
 }
 
-.item {
+.team-list {
+  display: flex;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.team-list__item {
   width: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
@@ -551,7 +556,7 @@ textarea {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-face {
+.team-person {
   background: #FFFFFF;
   border-radius: 0px 0px 4px 4px;
   text-align: center;
@@ -559,13 +564,7 @@ textarea {
   padding-bottom: 30px;
 }
 
-.team-list {
-  display: flex;
-  margin-left: -30px;
-  margin-bottom: -30px;
-}
-
-.list {
+.team-person__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -573,18 +572,18 @@ textarea {
   color: var(--title-text-color);
 }
 
-.team-p {
+.team-person__text {
   margin-bottom: 16px;
 }
 
-.team-item {
+.team-person__span {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   color: var(--primary-text-color);
 }
 
-.team-people {
+.person-app {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -592,7 +591,7 @@ textarea {
   margin-right: 30px;
 }
 
-.team-people-link {
+.person-app__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -603,20 +602,16 @@ textarea {
   color: var(--clients-link-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.team-people-link:hover,
-.team-people-link:focus {
+.person-app__link:hover, .person-app__link:focus {
   background-color: var(--accent-color);
 }
 
-.team-people-link:hover .team-people-icon,
-.team-people-link:focus .team-people-icon {
-  fill: var(--primary-white-color);
-}
-
-.team-people-icon {
+.person-app__icon {
   display: flex;
   fill: var(--clients-link-color);
+}
+.person-app__link:hover .person-app__icon, .person-app__link:focus .person-app__icon {
+  fill: var(--primary-white-color);
 }
 
 .clients {
@@ -625,7 +620,7 @@ textarea {
   background-color: var(--primary-white-color);
 }
 
-.clients-text {
+.clients__text {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -638,7 +633,7 @@ textarea {
   justify-content: space-between;
 }
 
-.clients-link {
+.clients-list__link {
   display: flex;
   border: 1px solid var(--clients-link-color);
   box-sizing: border-box;
@@ -648,19 +643,15 @@ textarea {
   padding: 16px 32px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.icon-clients {
-  fill: var(--clients-link-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-link:hover,
-.clients-link:focus {
+.clients-list__link:hover, .clients-list__link:focus {
   border-color: var(--accent-color);
 }
 
-.clients-link:hover .icon-clients,
-.clients-link:focus .icon-clients {
+.clients-list__icon {
+  fill: var(--clients-link-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-list__link:hover .clients-list__icon, .clients-list__link:focus .clients-list__icon {
   fill: var(--accent-color);
 }
 
@@ -693,7 +684,6 @@ textarea {
 .footer-address__item {
   margin-bottom: 9px;
 }
-
 .footer-address__item .footer-address__link--white {
   color: var(--primary-white-color);
 }
@@ -707,9 +697,7 @@ textarea {
   color: var(--color-footer-link);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer-address__link:hover,
-.footer-address__link:focus {
+.footer-address__link:hover, .footer-address__link:focus {
   color: var(--accent-color);
 }
 
@@ -750,9 +738,7 @@ textarea {
   background-color: rgba(255, 255, 255, 0.1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer-join__link:hover,
-.footer-join__link:focus {
+.footer-join__link:hover, .footer-join__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -786,7 +772,6 @@ textarea {
   color: var(--primary-white-color);
   font-size: 16px;
 }
-
 .footer-input__sign::-moz-placeholder {
   font-family: Roboto;
   font-style: normal;
@@ -798,7 +783,6 @@ textarea {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .footer-input__sign:-ms-input-placeholder {
   font-family: Roboto;
   font-style: normal;
@@ -810,7 +794,6 @@ textarea {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .footer-input__sign::placeholder {
   font-family: Roboto;
   font-style: normal;

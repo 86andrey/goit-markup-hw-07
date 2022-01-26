@@ -4,7 +4,13 @@
     background-color: var(--portfolio-btn-color);
 }
 
-.item {
+.team-list {
+    display: flex;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+
+.team-list__item {
     width: calc(100% / 3 - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
@@ -14,7 +20,7 @@
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-face {
+.team-person {
     background: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     text-align: center;
@@ -22,14 +28,7 @@
     padding-bottom: 30px;
 }
 
-
-.team-list {
-    display: flex;
-    margin-left: -30px;
-    margin-bottom: -30px;
-}
-
-.list {
+.team-person__title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -37,18 +36,18 @@
     color: var(--title-text-color);
 }
 
-.team-p {
+.team-person__text {
     margin-bottom: 16px;
 }
 
-.team-item {
+.team-person__span {
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
     color: var(--primary-text-color);
 }
 
-.team-people {
+.person-app {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -56,7 +55,7 @@
     margin-right: 30px;
 }
 
-.team-people-link {
+.person-app__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -66,19 +65,19 @@
     justify-content: center;
     color: var(--clients-link-color); 
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        background-color: var(--accent-color);
+    }
 }
 
-.team-people-link:hover,
-.team-people-link:focus {
-    background-color: var(--accent-color);
-}
-
-.team-people-link:hover .team-people-icon,
-.team-people-link:focus .team-people-icon {
-    fill: var(--primary-white-color);
-}
-
-.team-people-icon {
+.person-app__icon {
     display: flex;
     fill: var(--clients-link-color);
+
+    .person-app__link:hover &,
+    .person-app__link:focus & {
+        fill: var(--primary-white-color);
+    }
 }
+

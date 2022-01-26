@@ -48,16 +48,16 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button:hover .close-icon {
-    fill: var(--accent-color);
-}
-
-.close-icon {
+.close-button__icon {
     fill: var(--title-text-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .close-button:hover & {
+        fill: var(--accent-color);
+    }
 }
 
-.modal-title {
+.modal__title {
     margin-bottom: 12px;
     font-size: 20px;
     line-height: 1.15;
@@ -65,19 +65,20 @@
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
-.form-field-list {
+
+.form__list {
     display: block;
     margin: 0;
     padding: 0;
 }
-.form-field {
+.form__item {
     position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-field input {
+.form__input-name {
     margin-top: 4px;
     padding: 12px 42px ;
     height: 40px;
@@ -86,14 +87,14 @@
     border-radius: 4px;
 }
 
-.form-field label {
+.form__label {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
 }
 
-.field-phone-icon {
+.form__img {
     position: absolute;
     width: 18px;
     height: 18px;
@@ -103,7 +104,7 @@
     box-sizing: border-box;
 }
 
-.form-field textarea::placeholder {
+.form__item textarea::placeholder {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -129,18 +130,18 @@ textarea {
     margin-bottom: 20px;
 }
 
-.form-field:hover .input-name,
-.form-field:focus-within .input-name {
+.form__item:hover .form__input-name,
+.form__item:focus-within .form__input-name {
     border-color: var(--accent-color);
 }
 
-.form-icon {
+.form__icon {
     background-size: contain;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:hover .form-icon,
-.form-field:focus-within .form-icon {
+.form__item:hover .form__icon,
+.form__item:focus-within .form__icon {
     fill: var(--accent-color);
 }
 
