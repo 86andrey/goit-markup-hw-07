@@ -3,23 +3,23 @@
     padding-bottom: 94px;
 }
 
-.feature-list .list {
+.about-list .list {
     color: var(--title-text-color);
 }
 
-.feature-list {
+.about-list {
     display: flex;
 }
 
-.feature-list-item {
+.about-list__item {
     width: 270px;
 }
 
-.feature-list-item:not(:last-child) {
+.about-list__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.about-icon {
+.about-list__icon {
     display: flex;
     height: 120px;
     width: 100%;
@@ -29,12 +29,12 @@
     margin-bottom: 30px;
 }
 
-.about-iconsvg {
+.about-list__image {
     display: flex;
     justify-content: center;
 }
 
-.feature-text {
+.about-list__text {
     line-height: 1.71;
     max-width: 270px;
 }

@@ -126,8 +126,7 @@ body {
   line-height: 1.2;
   text-decoration: none;
 }
-
-.header-logo__text {
+.header-logo .header-logo__text {
   color: var(--title-text-color);
 }
 
@@ -145,17 +144,13 @@ body {
   color: var(--title-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.site-nav__link:hover, .site-nav__link:focus {
+  color: var(--accent-color);
+}
 .site-nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
-
-.site-nav__item:not(:last-child),
-.auth-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .site-nav__link--current::after {
   position: absolute;
   content: "";
@@ -168,9 +163,9 @@ body {
   background-color: var(--accent-color);
 }
 
-.site-nav__link:hover,
-.site-nav__link:focus {
-  color: var(--accent-color);
+.site-nav__item:not(:last-child),
+.auth-nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .auth-nav {
@@ -188,9 +183,7 @@ body {
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.auth-nav__link:hover,
-.auth-nav__link:focus {
+.auth-nav__link:hover, .auth-nav__link:focus {
   color: var(--accent-color);
 }
 
@@ -201,6 +194,9 @@ body {
   fill: var(--primary-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.auth-nav__item:hover .auth-nav__iconmail, .auth-nav__item:focus .auth-nav__iconmail {
+  fill: var(--accent-color);
+}
 
 .auth-nav__iconphone {
   width: 10px;
@@ -209,11 +205,7 @@ body {
   fill: var(--primary-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.auth-nav__item:hover .auth-nav__iconmail,
-.auth-nav__item:focus .auth-nav__iconmail,
-.auth-nav__item:hover .auth-nav__iconphone,
-.auth-nav__item:focus .auth-nav__iconphone {
+.auth-nav__item:hover .auth-nav__iconphone, .auth-nav__item:focus .auth-nav__iconphone {
   fill: var(--accent-color);
 }
 
@@ -479,23 +471,23 @@ textarea {
   padding-bottom: 94px;
 }
 
-.feature-list .list {
+.about-list .list {
   color: var(--title-text-color);
 }
 
-.feature-list {
+.about-list {
   display: flex;
 }
 
-.feature-list-item {
+.about-list__item {
   width: 270px;
 }
 
-.feature-list-item:not(:last-child) {
+.about-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.about-icon {
+.about-list__icon {
   display: flex;
   height: 120px;
   width: 100%;
@@ -505,12 +497,12 @@ textarea {
   margin-bottom: 30px;
 }
 
-.about-iconsvg {
+.about-list__image {
   display: flex;
   justify-content: center;
 }
 
-.feature-text {
+.about-list__text {
   line-height: 1.71;
   max-width: 270px;
 }
