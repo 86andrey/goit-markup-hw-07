@@ -105,8 +105,7 @@ body {
   margin-right: auto;
 }
 
-.title-h2 {
-  font-weight: bold;
+.work__title, .clients__title {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -114,7 +113,7 @@ body {
   color: var(--title-text-color);
 }
 
-.title-h3 {
+.about-list__title {
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
@@ -624,14 +623,6 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--primary-white-color);
-}
-
-.clients__text {
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  color: var(--title-text-color);
-  margin-bottom: 50px;
 }
 
 .clients-list {
