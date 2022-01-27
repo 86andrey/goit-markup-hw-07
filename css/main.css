@@ -275,11 +275,10 @@ body {
 
 .modal {
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  padding: 40px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -315,6 +314,7 @@ body {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
+  font-weight: bold;
   color: var(--title-text-color);
 }
 
@@ -328,7 +328,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -718,9 +718,6 @@ body {
 .footer-join__list,
 .footer-input__list {
   display: flex;
-  align-items: center;
-  width: 206px;
-  height: 44px;
 }
 
 .footer-join__link {
@@ -748,11 +745,6 @@ body {
 .footer-input__icon {
   margin-left: 10px;
   fill: var(--primary-white-color);
-}
-
-.footer-input__list {
-  display: flex;
-  align-items: center;
 }
 
 .footer-input__sign {
